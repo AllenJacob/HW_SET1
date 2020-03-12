@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+               <table class="table">
+                   <tr>
+                       <td>Enter number 1</td>
+                       <td><input type="text" class="form-control" id="num1"></td>
+                   </tr>
+                   <tr>
+                       <td>Enter number 2</td>
+                       <td><input type="text" class="form-control" id="num2"></td>
+                   </tr>
+                   <tr>
+                       <td>Enter number 3</td>
+                       <td><input type="text" class="form-control" id="num3"></td>
+                   </tr>
+                   <tr>
+                       <td></td>
+                       <td><button class="btn btn-primary" onclick="biggest();">CHECK</button></td>
+                   </tr>
+                   <tr>
+                       <td></td>
+                       <td><p id="result"></p></td>
+                   </tr>
+               </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        function biggest()
+        {
+            var x=parseInt(document.getElementById("num1").value);
+            var y=parseInt(document.getElementById("num2").value);
+            var z=parseInt(document.getElementById("num3").value);
+            if(x>y&&x>z)
+            {
+                document.getElementById("result").innerHTML="Number 1 is biggest";
+            }
+            else if(y>x&&y>z)
+            {
+                document.getElementById("result").innerHTML="Number 2 is biggest";
+            }
+            else 
+            {
+                document.getElementById("result").innerHTML="Number 3 is biggest";
+            }
+        }
+    </script>
+</body>
+</html>

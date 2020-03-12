@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <tr>
+                        <td>Enter a number</td>
+                        <td><input type="text" class="form-control" id="num"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button class="btn btn-secondary" onclick="divisibility();">CHECK</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><p id="result"></p></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        function divisibility()
+        {
+            var x=parseInt(document.getElementById("num").value);
+            if(x%8==0)
+            {
+                document.getElementById("result").innerHTML="Divisble by 8";
+            }
+            else
+            {
+                document.getElementById("result").innerHTML="Not divisible";
+            }
+        }
+    </script>
+</body>
+</html>
